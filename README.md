@@ -28,7 +28,7 @@ To install Metaflow in your local environment, you can install from [PyPi](https
 ```sh
 pip install metaflow
 ```
-Alternatively, you can also install from [conda-forge](https://anaconda.org/conda-forge/metaflow):
+    Alternatively, you can also install from [conda-forge](https://anaconda.org/conda-forge/metaflow):
 
 ```sh
 conda install -c conda-forge metaflow

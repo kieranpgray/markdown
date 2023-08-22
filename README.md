@@ -1,3 +1,16 @@
+This is how i understand whats happening:
+
+    Markdown has syntax where 4 spaces equals a code blockI've just been exploring this within GitHubs markdown editor. Having four spaces in the markdown syntax -> pasting that markdown into our editor -> doesn't cause a code block to be added. 
+
+New line
+Shift enter
+    4 spaces no code block
+
+    4 spaces
+    end
+
+Clear
+
 # markdown-it <!-- omit in toc -->
 
 [![CI](https://github.com/markdown-it/markdown-it/workflows/CI/badge.svg)](https://github.com/markdown-it/markdown-it/actions)

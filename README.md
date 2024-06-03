@@ -1,3 +1,172 @@
+
+Below is a complex example of Markdown showcasing various elements such as code blocks, tables, images, and more:
+
+H~2~O
+
+
+
+# Complex Markdown Example
+
+## Code Blocks
+You can display code blocks in Markdown by using triple backticks. You can also specify the programming language for syntax highlighting.
+
+
+
+- ```python
+def greet(name):
+    print(f"Hello, {name}!")
+```
+    - ```javascript
+const add = (a, b) => a + b;
+```
+
+## Tables with code blocks, links, and media
+Tables can be created using pipes and hyphens.
+
+| Name      | Age | Occupation   |
+|-----------|-----|--------------|
+| > John      | ~~30~~  | ```python    |
+| ```javascript  | 25  | [Google](https://www.google.com)     |
+| **Michael**   | 40  | ![Nature](https://thumbs.dreamstime.com/z/bee-flower-27533578.jpg)    |
+
+## Images
+You can embed images using
+
+![Nature](https://thumbs.dreamstime.com/z/bee-flower-27533578.jpg)
+
+## Links
+You can create hyperlinks using `[link text](URL)` syntax.
+
+Here's a link to [Google](https://www.google.com).
+
+## Text Formatting
+You can add formatting to your text:
+
+- **Bold**: Wrap the text in double asterisks or underscores: `**bold text**` or `__bold text__`.
+- *Italic*: Wrap the text in single asterisks or underscores: `*italic text*` or `_italic text_`.
+- ~~Strikethrough~~: Use double tilde: `~~strikethrough text~~`.
+
+## Lists
+You can create ordered and unordered lists.
+
+Unordered list:
+- Item 1
+- Item 2
+- Item 3
+
+Ordered list:
+1. First item
+2. Second item
+3. Third item
+
+## Blockquotes
+You can create blockquotes using the greater than sign (\>) at the start of the line.
+
+> This is a blockquote.
+> It can span multiple lines.
+
+## Horizontal Rule
+You can add a horizontal rule using three hyphens, underscores, or asterisks.
+
+---
+
+## Escaping Characters
+To display special characters as plain text, use a backslash (\) before the character.
+
+For example, \*This text will not be italicized\*.
+
+# Comparison of syntax extensions in Markdown flavors 
+
+I created a crude comparison of the syntax of the various common Markdown extensions to have a better view on what are the most common extensions and what is the most widely accepted syntax for them. The list of Markdown flavors that I looked at was based on the list found on CommonMark's [GitHub Wiki](https://github.com/commonmark/commonmark/wiki/markdown-flavors).
+
+| Flavor            |    Superscript    | Subscript | Deletion*<br>Strikethrough | Insertion*  | Highlight*  |  Footnote  |  Task list   | Table |      Abbr       | Deflist | Smart typo |    TOC    |                Math                 |              Math Block               | Mermaid |
+| ----------------- | :---------------: | :-------: | :------------------------: | :---------: | :---------: | :--------: | :----------: | :---: | :-------------: | :-----: | :--------: | :-------: | :---------------------------------: | :-----------------------------------: | :-----: |
+| GFM               |                   |           |         `~~...~~`          |             |             |            |  `- [] ...`  |   +   |                 |         |            |           |                                     |                                       |         |
+| **ExtraMark**     |      `^...^`      |  `~...~`  |        `{--...--}`         | `{++...++}` | `{==...==}` | `[^...]`** | `- [] ...`** |   +   | `*[...]: ...`** |  `: `   |            |           |                                     |                                       |         |
+| MultiMarkdown     | `^...^`<br>`^...` |  `~...~`  |        `{--...--}`         | `{++...++}` | `{==...==}` |  `[^...]`  |              |   +   |  `*[...]: ...`  |  `: `   |     +      | `{{TOC}}` |             `\\(...\\)`             |              `\\[...\\]`              |         |
+| Markdown Extra    |                   |           |                            |             |             |   `[^1]`   |              |   +   |  `*[...]: ...`  |  `: `   |            |           |                                     |                                       |         |
+| Pandoc            |      `^...^`      |  `~...~`  |         `~~...~~`          |             |             |  `[^...]`  |              |   +   |  `*[...]: ...`  |  `: `   |            |           |               `$...$`               |                                       |         |
+| Kramdown          |                   |           |                            |             |             |   `[^1]`   |              |   +   |  `*[...]: ...`  |  `: `   |            |           |                                     |                                       |         |
+| Markua            |      `^...^`      |  `~...~`  |  `~~...~~`<br>`{--...--}`  | `{++...++}` | `{==...==}` |  `[^...]`  |              |   +   |                 |  `: `   |            |           |            `` `...`$ ``             |                                       |         |
+| Maruku            |                   |           |                            |             |             |   `[^1]`   |              |   +   |  `*[...]: ...`  |  `: `   |            |           |               `$...$`               |                 `$$`                  |         |
+| Markdown2         |      `^...^`      |           |                            |             |             |            |              |   +   |                 |         |            |           |                                     |                                       |         |
+| Remarkable        |      `^...^`      |  `~...~`  |         `~~...~~`          |  `++...++`  |  `==...==`  |            |              |       |                 |         |     +      |           |                                     |                                       |         |
+| Showdown          |                   |           |         `~~...~~`          |             |             |   `[^1]`   |  `- [] ...`  |   +   |                 |         |            |  `[toc]`  | `$ ... $`<br>`~...~`<br>`\\(...\\)` | `\\[...\\]`<br>```` ```asciimath ```` |         |
+| Ghost             |      `^...^`      |  `~...~`  |         `~~...~~`          |             |  `==...==`  |            |              |       |                 |         |            |           |                                     |                                       |         |
+| GitLab            |                   |           |  `~~...~~`<br>`{- ... -}`  | `{+ ... +}` |             |   `[^1]`   |  `- [] ...`  |   +   |                 |         |            |           |               `$...$`               |           ```` ```math ````           |    +    |
+| Haroopad          |                   |           |                            |             |  `==...==`  |            |  `- [] ...`  |       |                 |         |            |  `[TOC]`  |                                     |                                       |    +    |
+| iA Writer         |                   |           |                            |             |             |   `[^1]`   |  `- [] ...`  |   +   |                 |         |            | `{{TOC}}` |       `$...$`<br>`\\(...\\)`        |       `$$...$$`<br>`\\[...\\]`        |         |
+| Redcarpet         |     `^(...)`      |           |         `~~...~~`          |             |  `==...==`  |   `[^1]`   |              |   +   |                 |         |            |           |                                     |                                       |         |
+| ScholarlyMarkdown |                   |           |                            |             |             |            |              |       |                 |         |            |           |     `$...$`<br>``` ``....`` ```     |           ```` ```math ````           |         |
+| Taiga             |                   |           |                            |             |             |            |              |   +   |                 |         |            |           |                                     |                                       |         |
+| Trello            |                   |           |         `~~...~~`          |             |             |            |              |       |                 |         |            |           |                                     |                                       |         |
+| s9e\TextFormatter | `^...^`<br>`^...` |  `~...~`  |         `~~...~~`          |             |             |            |              |       |                 |         |            |           |                                     |                                       |         |
+
+`[*]`: Some dialects use the [CriticMarkup] syntax for these features
+`[**]`: Planned in the future
+
+[CriticMarkup]: http://criticmarkup.com
+
+# The markdown below is not supported by the editor
+
+## Task Lists
+You can create task lists by using brackets with spaces [ ], [x], or [X].
+
+- [x] Task 1
+- [ ] Task 2
+- [ ] Task 3
+
+## Footnotes
+You can add footnotes using the caret and brackets syntax [^1].
+
+[^1]: This is a footnote.
+
+
+
+## LaTeX Equations
+You can include mathematical equations using LaTeX syntax.
+
+Inline equation: \(E = mc^2\)
+
+Display equation:
+\[F(x) = \int_{-\infty}^{\infty} f(x) \, dx\]
+
+## YouTube Videos
+You can embed YouTube videos using an iframe.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+
+## Emoji
+You can include emoji using colons like :smile: or :rocket:.
+
+## Check GitHub Markdown Guide
+For more advanced Markdown features, check the [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/).
+
+
+This example showcases various elements in Markdown, including code blocks, tables, images, links, text formatting, lists, blockquotes, horizontal rule, task lists, footnotes, escaping characters, LaTeX equations, YouTube videos, and emojis. You can render this Markdown code in a Markdown editor or a platform that supports Markdown rendering to see the output.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This is how i understand whats happening:
 
     Markdown has syntax where 4 spaces equals a code blockI've just been exploring this within GitHubs markdown editor. Having four spaces in the markdown syntax -> pasting that markdown into our editor -> doesn't cause a code block to be added. 
@@ -57,6 +226,8 @@ npm install markdown-it --save
 
 - [jsDeliver CDN](http://www.jsdelivr.com/#!markdown-it "jsDelivr CDN")
 - [cdnjs.com CDN](https://cdnjs.com/libraries/markdown-it "cdnjs.com")
+
+
 
 
 ## Usage examples
